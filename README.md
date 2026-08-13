@@ -29,27 +29,27 @@ This project implements an adaptive filter that estimates and cancels acoustic e
 ### ERLE Performance (Baseline)
 Up to 26 dB of echo suppression tracked over time, overlaid with the input speech waveform.
 
-![ERLE Curve](images/erle_curve.png)
+![ERLE Curve](erle_curve.png)
 
 ### Signal Chain Overview
 Far-end speech, simulated echo, near-end speech, and the resulting microphone signal (echo + near-end + injected disturbance).
 
-![Signals Overview](images/signals_overview.png)
+![Signals Overview](signals_overview.png)
 
 ### Echo Tracking & Residual Echo
 Actual vs. estimated echo overlay, showing how closely the adaptive filter tracks the true echo path, plus the resulting residual.
 
-![Echo Tracking](images/echo_tracking.png)
+![Echo Tracking](echo_tracking.png)
 
 ### Near-End Preservation
 Comparison of the original near-end speech against the residual (error) signal, confirming near-end speech is preserved while echo is suppressed.
 
-![Near-End vs Residual](images/nearend_residual.png)
+![Near-End vs Residual](nearend_residual.png)
 
 ### Spectrogram: Before vs. After Cancellation
 Time-frequency view of the microphone signal before and after echo cancellation.
 
-![Spectrograms](images/spectrograms.png)
+![Spectrograms](spectrograms.png)
 
 ## Repository Structure
 
@@ -60,7 +60,11 @@ Time-frequency view of the microphone signal before and after echo cancellation.
 ├── case2_stress_eval.m      # Multi-point impulsive disturbance stress test
 ├── S_01_01.wav               # Far-end speech sample
 ├── S_01_02.wav               # Near-end speech sample
-└── images/                  # Result figures used in this README
+├── erle_curve.png            # Result figures used in this README
+├── signals_overview.png
+├── echo_tracking.png
+├── nearend_residual.png
+└── spectrograms.png
 ```
 
 ## Requirements
